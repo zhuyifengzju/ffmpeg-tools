@@ -26,3 +26,8 @@ ffmpeg -i NAME.mp4 -vf drawtext="fontfile=/path/to/font.ttf: \
 text='TEXT': fontcolor=white: fontsize=24: box=1: boxcolor=black@0.5: \
 boxborderw=5: x=(w-text_w)/2: y=(h-text_h)/3*2" -codec:a copy NAME.mp4
 ```
+
+### Crop a video
+```
+ffmpeg -i NAME.mp4 -filter:v "crop=in_w/3 * 2:in_h/4*3:in_w/4:in_h/5" cropped_NAME.mp4
+```
